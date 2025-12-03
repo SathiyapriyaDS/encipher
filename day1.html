@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Text Formatting Tags & Links — Simple</title>
+  <style>
+    body{font-family:Arial, Helvetica, sans-serif; max-width:780px; margin:28px auto; padding:0 18px; color:#111}
+    header{margin-bottom:18px}
+    section{margin-bottom:14px}
+    nav a{display:inline-block; margin-right:10px}
+    .portfolio a{display:block; margin:6px 0}
+    .math{font-family:monospace}
+  </style>
+</head>
+<body>
+  <!-- Clicking the H1 and the intro paragraph opens example.com in a new tab -->
+  <a href="https://example.com" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+    <h1>Simple Demo: Formatting & Links</h1>
+    <p>Clicking the heading or this paragraph goes to example.com.</p>
+  </a>
+
+  <!-- 1. Page showing 10 formatting tags (simple list) -->
+  <section>
+    <h2>1 — 10 Formatting Tags</h2>
+    <ul>
+      <li>&lt;h1&gt; — Heading</li>
+      <li>&lt;p&gt; — Paragraph</li>
+      <li>&lt;strong&gt; — Strong (bold)</li>
+      <li>&lt;em&gt; — Emphasis (italic)</li>
+      <li>&lt;mark&gt; — Highlight</li>
+      <li>&lt;u&gt; — Underline</li>
+      <li>&lt;code&gt; — Inline code</li>
+      <li>&lt;blockquote&gt; — Quote</li>
+      <li>&lt;sup&gt; / &lt;sub&gt; — Superscript / Subscript</li>
+      <li>&lt;a&gt; — Link</li>
+    </ul>
+  </section>
+
+  <!-- 2. Article using h1-h6 -->
+  <section>
+    <h2>2 — Article (headings h1–h6)</h2>
+    <article>
+      <h1>Healthy Living</h1>
+      <h2>Daily Basics</h2>
+      <h3>Eat well</h3>
+      <h4>Stay active</h4>
+      <h5>Sleep enough</h5>
+      <h6>Small steps matter</h6>
+    </article>
+  </section>
+
+  <!-- 3. Paragraph with bold, strong, mark -->
+  <section>
+    <h2>3 — Highlighted Paragraph</h2>
+    <p>
+      Maintaining health is about <b>consistency</b>, not perfection. Use <strong>small daily choices</strong> to build habits —
+      <mark>drink water, move a little, and sleep on time</mark>.
+    </p>
+  </section>
+
+  <!-- 4. Math expressions using sup and sub -->
+  <section>
+    <h2>4 — Math Expressions (sup & sub)</h2>
+    <p class="math">H<sub>2</sub>SO<sub>4</sub></p>
+    <p class="math">x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></p>
+    <p class="math">E = mc<sup>2</sup></p>
+    <p class="math">CO<sub>2</sub></p>
+    <p class="math">a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub></p>
+  </section>
+
+  <!-- 5. Equation using hr tag -->
+  <section>
+    <h2>5 — Chemical Equation (with &lt;hr&gt;)</h2>
+    <hr>
+      <p>Zn(s) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; ZnSO<sub>4</sub>(aq) + H<sub>2</sub>(g)</p>
+    <hr>
+  </section>
+
+  <!-- 6. Homepage (mini portfolio) with 5 external links -->
+  <section>
+    <h2>6 — Mini Portfolio (homepage links)</h2>
+    <div class="portfolio">
+      <a href="https://example.com/project1" target="_blank" rel="noopener noreferrer">Project 1 — Example</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+      <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance Portfolio</a>
+      <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble Shots</a>
+      <a href="https://codepen.io" target="_blank" rel="noopener noreferrer">CodePen Demos</a>
+    </div>
+  </section>
+
+  <!-- 7. Social links (open in new tab) -->
+  <section>
+    <h2>7 — Social Links (new tab)</h2>
+    <nav>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </nav>
+  </section>
+
+  <!-- 8. h1 and p already wrapped at the top to redirect -->
+  <section>
+    <h2>8 — Clickable Heading & Paragraph</h2>
+    <p>Top of the page: the main heading and the short intro paragraph are links to example.com (open in new tab).</p>
+  </section>
+
+  <footer style="margin-top:22px;font-size:13px;color:#444">Made simple — copy this file and open in a browser. Replace example links with your real URLs.</footer>
+</body>
+</html>
