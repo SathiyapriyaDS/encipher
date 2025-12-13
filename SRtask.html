@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/A.T.Akilan/Desktop/sp/today_task.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffffcb;
+        }
+
+        .form-box {
+            width: 350px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="phone number"],
+        input[type="city"],
+        input[type="state"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        .gender-group {
+            margin: 10px 0 15px 0;
+        }
+
+        .gender-group label {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(80, 231, 80);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <h2>Student Registration</h2>
+
+        <form>
+            <input type="text" placeholder="Student Name" required="">
+            <input type="email" placeholder="Email" required="">
+            <input type="password" placeholder="Password" required="">
+            <input type="phone number" placeholder=" Phone number" required="">
+            <input type="city" placeholder="city" required="">
+            <input type="state" placeholder="state" required="">
+            <div class="gender-group">
+                <strong>Gender:</strong><br><br>
+                <label>
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                 </label>
+            </div>
+
+            <select required="">
+                <option value="">Select Course</option>
+                <option>Frontend</option>
+                <option>Backend</option>
+                <option>UI/UX design</option>
+                <option>AI/ML &amp; data science</option>
+                <option>Cloud computing</option>
+                <option>mern stack</option>
+            </select>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+
+
+
+</body></html>
