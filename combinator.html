@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/A.T.Akilan/Desktop/sp/sp/Untitled-1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title> CSS combinators</title>
+<style>
+  p ~ ul{
+    background-color: rgb(146, 237, 224);
+    border: 1px;
+  }
+  .c2>p{
+    background-color: blanchedalmond;
+    border: 1px;
+  
+  }
+  .c3 p{
+    background-color: rgb(97, 187, 131);
+  }
+  .c4 + p{
+    background-color: greenyellow;
+  }
+  .c5 ~ p{
+    background-color: rgb(79, 167, 17);
+  } 
+</style></head>
+
+<body>
+  <h1 style="text-align: center; background-color: purple;">combinator</h1>
+    <div>
+    <p>Types of Combinator</p>
+    <ul>
+      <li>Child combinator</li>
+      <li>descendant combinator</li>
+      <li>next sibling combinator</li>
+      <li>subsequent sibling combinator</li>
+      </ul>
+    </div>
+    <h1 style="text-align: center; background-color: purple;">1.Child combinator</h1>
+    <div class="c2">
+      <h2>Greater than(&gt;)</h2>
+      <section><p>Selects only direct children of an element.</p></section>
+      <p>Selects only direct children of an element.</p>
+    </div>
+    <h1 style="text-align: center; background-color: purple;">2.descendant combinator</h1>
+    <div class="c3">
+      <h2>space</h2>
+      <span><p>Selects all matching elements inside another element, at any level.</p></span>
+      <p>Selects all matching elements inside another element, at any level.</p>
+      <p>Selects all matching elements inside another element, at any level.</p>
+    </div>
+    <h2 style="text-align: center; background-color: purple;">3.Next sibling combinator</h2>
+    <div class="c4">
+      <h2>plus sign</h2>
+      <p>The next sibling combinator is called the Adjacent Sibling Combinator.It selects only the very next element that comes immediately after a specified element at the same level (same parent).</p>
+      <p>The next sibling combinator is called the Adjacent Sibling Combinator.It selects only the very next element that comes immediately after a specified element at the same level (same parent).</p>
+      </div>
+      <p>The next sibling combinator is called the Adjacent Sibling Combinator.It selects only the very next element that comes immediately after a specified element at the same level (same parent).</p>
+      <p>The next sibling combinator is called the Adjacent Sibling Combinator.It selects only the very next element that comes immediately after a specified element at the same level (same parent).</p>
+      <h2 style="text-align: center; background-color: purple;">4.subsequent sibling combinator</h2>
+      <div class="c5">
+        <h2>Tilde</h2>
+        </div>
+      <div>
+        <p>It selects all sibling elements that come after a specified element under the same parent.The subsequent sibling combinator is also called the General Sibling Combinator.</p>
+       </div>
+        <p>It selects all sibling elements that come after a specified element under the same parent.The subsequent sibling combinator is also called the General Sibling Combinator.</p>
+        <code>It selects all sibling elements that come after a specified element under the same parent.The subsequent sibling combinator is also called the General Sibling Combinator.</code>
+        <p>It selects all sibling elements that come after a specified element under the same parent.The subsequent sibling combinator is also called the General Sibling Combinator.</p>
+       <hr>
+       <h1 style="background-color:  rgb(11, 132, 124); text-align: center;">pseudo class</h1>
+       <ul>
+        <li>:active</li>
+        <li>:any-link</li>
+        <li>:auto-fill</li>
+        <li>:checked</li>
+        <li>:default</li>
+        <li>:defined</li>
+        <li>:dir()</li>
+        <li>:disabled</li>
+        <li>:empty</li>
+        <li>:enabled</li>
+        <li>:first</li>
+        <li>:first-child</li>
+        <li>:focus</li>
+        <li>:focus-visible</li>
+        <li>:focus-within</li>
+        <li>:fullscreen</li>
+        <li>:has()</li>
+        <li>:hover</li>
+       </ul>
+<h1 style="background-color: rgb(11, 132, 124); text-align: center;">pseudo elements</h1>
+<ul>
+<li>::after</li>
+<li>::backdrop</li>
+<li>::before</li>
+<li>::file-selector-button</li>
+<li>::first-letter</li>
+<li>::first-line</li>
+<li>::grammar-error</li>
+<li>::highlight()</li>
+<li>::marker</li>
+<li>::placeholder</li>
+<li>::selection</li>
+<li>::spelling-error</li>
+<li>::view-transition</li>
+<li>::view-transition-group</li>
+<li>::view-transition-image-pair</li>
+<li>::view-transition-new</li>
+<li>::view-transition-old</li>
+</ul></body></html>
