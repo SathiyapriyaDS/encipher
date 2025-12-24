@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://127.0.0.1:5500/Day%2020/sign%20up.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Sign Up</title>
+
+<link href="./Coffee Sign Up_files/css2" rel="stylesheet">
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(right , orangered, rgb(246, 232, 204)),
+}
+
+.signup-box{
+    background: #fff;
+    width: 380px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.signup-box h2{
+    color: #5a3e2b;
+    margin-bottom: 20px;
+}
+
+.signup-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.signup-box button{
+    width: 100%;
+    padding: 12px;
+    background: #5a3e2b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-box button:hover{
+    background: #3e2a1d;
+}
+
+.signup-box p{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-box a{
+    color: #5a3e2b;
+    text-decoration: none;
+    font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+
+<div class="signup-box">
+    <h2>☕ Create Account</h2>
+
+    <input type="text" placeholder="Full Name" required="">
+    <input type="email" placeholder="Email Address" required="">
+    <input type="password" placeholder="Password" required="">
+    <input type="password" placeholder="Confirm Password" required="">
+
+    <button>Sign Up</button>
+
+    <a href="http://127.0.0.1:5500/Day%2020/login%20shop.html">Login</a>
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

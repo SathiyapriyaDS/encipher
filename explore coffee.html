@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://127.0.0.1:5500/Day%2020/Explore%20Now.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Explore Coffee</title>
+    <style>
+.explore-page{
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff7f0;
+}
+
+.explore-page h1{
+    color: orangered;
+}
+
+.explore-grid{
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.coffee-card{
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.coffee-card img{
+    width: 120px;
+    margin: auto;
+}
+
+.coffee-card h3{
+    margin: 15px 0;
+    color: orangered;
+}
+
+.coffee-card span{
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.coffee-card button{
+    padding: 8px 20px;
+    border: none;
+    background: orangered;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="explore-page">
+
+    <h1>Explore Our Coffee</h1>
+    <p>Choose your favorite coffee and enjoy every sip</p>
+
+    <div class="explore-grid">
+
+        <div class="coffee-card">
+            <img src="./explore coffee_files/hot-beverages.png">
+            <h3>Espresso</h3>
+            <p>Strong and bold coffee</p>
+            <span>₹120</span>
+            <button>Order Now</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="./explore coffee_files/cold-beverages.png">
+            <h3>Cold Coffee</h3>
+            <p>Chilled and creamy</p>
+            <span>₹150</span>
+            <button>Order Now</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="./explore coffee_files/desserts.png">
+            <h3>Mocha</h3>
+            <p>Chocolate flavored coffee</p>
+            <span>₹180</span>
+            <button>Order Now</button>
+        </div>
+         <div class="coffee-card">
+            <img src="./explore coffee_files/refreshment.png">
+            <h3>Mocha</h3>
+            <p>Chocolate flavored coffee</p>
+            <span>₹100</span>
+            <button>Order Now</button>
+        </div>
+         <div class="coffee-card">
+            <img src="./explore coffee_files/special-combo.png">
+            <h3>Special combo</h3>
+            <p>Coffee with snacks combo</p>
+            <span>₹499</span>
+            <button>Order Now</button>
+        </div>
+         <div class="coffee-card">
+            <img src="./explore coffee_files/burger-frenchfries.png">
+            <h3>Burger &amp; Fries</h3>
+            <p>Tasty burger with crispy fries</p>
+            <span>₹299</span>
+            <button>Order Now</button>
+        </div>
+        
+        <div class="coffee-card">
+            <img src="./explore coffee_files/hot-beverages.png">
+            <h3>Espresso</h3>
+            <p>Strong and bold coffee</p>
+            <span>₹120</span>
+            <button>Order Now</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="./explore coffee_files/cold-beverages.png">
+            <h3>Cold Coffee</h3>
+            <p>Chilled and creamy</p>
+            <span>₹150</span>
+            <button>Order Now</button>
+        </div>
+
+        <div class="coffee-card">
+            <img src="./explore coffee_files/desserts.png">
+            <h3>Mocha</h3>
+            <p>Chocolate flavored coffee</p>
+            <span>₹180</span>
+            <button>Order Now</button>
+        </div>
+         <div class="coffee-card">
+            <img src="./explore coffee_files/refreshment.png">
+            <h3>Mocha</h3>
+            <p>Chocolate flavored coffee</p>
+            <span>₹100</span>
+            <button>Order Now</button>
+        </div>
+         <div class="coffee-card">
+            <img src="./explore coffee_files/special-combo.png">
+            <h3>Special combo</h3>
+            <p>Coffee with snacks combo</p>
+            <span>₹499</span>
+            <button>Order Now</button>
+        </div>
+         <div class="coffee-card">
+            <img src="./explore coffee_files/burger-frenchfries.png">
+            <h3>Burger &amp; Fries</h3>
+            <p>Tasty burger with crispy fries</p>
+            <span>₹299</span>
+            <button>Order Now</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
