@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/Day%2020/login%20shop.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Login</title>
+
+<link href="./Coffee Login_files/css2" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* BACKGROUND IMAGE + GRADIENT (LIKE HOME PAGE) */
+    background:
+      linear-gradient(
+        90deg,
+        orangered,
+        rgba(255,179,123,0.85),
+        rgba(255,224,194,0.9)
+      ),
+      url("images/coffee-hero-section.png");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+/* LOGIN CARD */
+.login-box{
+    width:360px;
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    text-align:center;
+}
+
+.login-box h2{
+    color:#5a3e2b;
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    background:#b35a1f;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#8c4215;
+}
+
+.login-box p{
+    margin-top:15px;
+    font-size:14px;
+}
+
+.login-box a{
+    color:#b35a1f;
+    text-decoration:none;
+    font-weight:500;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>☕ Coffee Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+    <p>New here? <a href="http://127.0.0.1:5500/Day%2020/web.html">Create account</a></p>
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

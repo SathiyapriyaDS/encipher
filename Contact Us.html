@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/Day%2020/contact%20Us.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+      .contact{
+    background: #fff7f0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.conrec{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.coninfo{
+    flex: 1;
+    text-align: left;
+}
+
+.coninfo p{
+    margin-bottom: 10px;
+}
+
+.conform{
+    flex: 1;
+}
+
+.conform input,
+.conform textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.conform a{
+    border: none;
+    background-color: #8b4513;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+     border-radius: 3.5px;
+}
+
+footer{
+    background: #6f3d1c;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social i{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="contact">
+  <h2>CONTACT US</h2>
+  <div class="line"></div>
+
+  <div class="conrec">
+    <div class="coninfo">
+      <p><i class="fa-solid fa-location-dot"></i> 123 Campsite Avenue, Wilderness, CA 98765</p>
+      <p><i class="fa-solid fa-envelope"></i> info@coffeeshopwebsite.com</p>
+      <p><i class="fa-solid fa-phone"></i> (123) 456-78909</p>
+      <p><i class="fa-solid fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+      <p><i class="fa-solid fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+      <p><i class="fa-solid fa-ban"></i> Sunday: Closed</p>
+      <p><i class="fa-solid fa-globe"></i> www.codingnepalweb.com</p>
+    </div>
+
+    <form class="conform">
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Your email">
+      <textarea placeholder="Your message"></textarea>
+      <a href="http://127.0.0.1:5500/Day%2020/submit.html" target="_blank">Submit</a>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 Coffee Shop</p>
+  <div class="social">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+  </div>
+  <p>Privacy policy • Refund policy</p>
+</footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

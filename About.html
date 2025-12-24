@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/Day%2020/About.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        
+.about{
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.about.main{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about.img{
+    flex: 1;
+}
+
+.about.para{
+    flex: 1;
+}
+
+.about.para, .h2{
+    color: #8b4513;
+}
+
+.Mediaicons i{
+    font-size: 22px;
+    margin-right: 15px;
+    margin-top: 15px;
+    color: #6f3d1c;
+}
+</style>
+</head>
+<body>
+<div class="about">
+    <div class="about main">
+    <div class="about img">
+        <img src="./About_files/about-image.jpg" alt="Coffee Shop">
+     </div>
+
+    <div class="about para">
+    <h2 style="text-align: center; color: black;">ABOUT US</h2>
+    <div class="line"></div>
+    <p>At Coffee House in Berndorf, Germany, we pride ourselves on being ago-to destination for coffee lovers and conversation seekers alike. We're dedicated to providing an exceptional coffee experience in acozy and inviting atmosphere, where guests can relax, unwind, and enjoy their time in comfort.</p>
+    <div class="Mediaicons">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+    </div>
+    </div>
+ </div>
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
