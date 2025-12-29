@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        
+       function greetuser(name) {
+            alert("hello, " + name +" Welcome ");
+        }
+        let username = prompt("Enter your name:");
+        greetuser(username);
+
+
+        
+        function check(num){
+         if(num%2===0){
+            alert(num + "is even");
+        }
+        else{
+            alert(num + "is odd");
+            }
+        }
+        let number = prompt("Enter a number:");
+           check(number);
+
+
+        let a = numbers(prompt("Number1:"));
+        let b = numbers(prompt("number2:"));
+        let op =numbers(prompt("operator:"));
+        switch(op){
+            case 0: 
+                  op = "a + b";
+                  break;
+            case 1:
+                op = "a-b";
+                break;
+            case 2:
+                op = "a * b";
+                break;
+            case 3:
+                op = "a / b";
+                break;
+            default:
+                alert("Invalid operator:")
+             }
+
+
+
+    
+        let age = prompt("Enter your age: ");
+        if(age>=18){
+            alert("eligible");
+         }
+        else{
+            alert("Not eligible");
+            }
+
+
+        let n=prompt("limit");
+        let sum=0;
+        for (let i=1; i<=n; i++)
+        sum+=i;
+        alert(sum);
+            
+
+        let number = prompt("password");
+        if(number.length >= 6)
+            alert("valid");
+        else
+            alert("Invalid");
+
+
+        let m=prompt("Marks");
+        if(m >= 80)
+           alert("A");
+        else if(m >= 60)
+            alert("B");
+        else if(m >= 40)
+            alert("C");
+        else 
+            alert("Fail");
+  
+
+        let a = prompt("a:");
+        let b = prompt("b:");
+        let c = prompt("c:");
+        
+        if(a > b && a > c)
+           alert(a);
+        else if(b > c)
+           alert(b);
+        else
+            alert(c);
+
+         
+        let username = "sathya";
+        let password = "12345";
+
+        if(username == "sathya" && password === "12345")
+          alert("success");
+        else
+           alert("Error");
+      
+
+      let a = prompt("Enter limit:");
+      let count = 0;
+      for(let i=1; i<a; i++){
+      if(i % 2 == 0){
+           count++;
+      }
+   }
+        alert(count);
+   
+          let n = prompt("Enter nnumber");
+          let rev = 0;
+
+          while(n>0){
+            rev = rev * 10 + (n % 10);
+            n = parseInt(n / 10);
+          }
+          alert(rev);
+
+
+        let p = prompt("p");
+         let r = prompt("r");
+         let t = prompt("t");
+           alert((p*r*t)/100);
+
+      let chocie = 5;
+      let guess = prompt("guess no:");
+      if(guess == chocie){
+         alert("correct");
+      }
+      else if(guess >chocie){
+         alert("Too high");
+      }
+      else{
+         alert("Too low");
+      }
+
+       
+      let p = prompt("Enter number:");
+      count = 0;
+      for(let i=0; i<=p; i++){
+         if( p % i == 2){
+            count++;
+
+         }
+         if(count==2){
+            alert("Prime");
+         }
+         else{
+            alert("Not prime");
+         }
+      }
+
+      let n = prompt("Enter number");
+      let f = 1;
+      for(let i=1; i<=n; i++){
+        f *= i;
+      }
+       alert(f);
+
+
+        let n = prompt("Number");
+        alert(n.length);
+ 
+      let n = prompt("Limit");
+      let e = 0;
+      let o = 0;
+      for (let i = 1; i <= n; i++) {
+      if (i % 2 == 0)
+       e = e + i;
+       else
+       o = o + i;
+      }
+      alert(e + " " + o);
+ 
+
+
+      if (confirm("Exit?")){
+        alert("Bye");
+      }
+      else{
+        alert("contine");
+      }
+
+
+
+       
+               
+</script>
+</head>
+<body>
+<p>hellooo</p>
+</body>
+</html>
