@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+    <script>
+        // let name = prompt("Enter username:");
+        // alert(name.trim().toLowerCase());
+
+        //   let email = prompt("enter email:");
+        //   if(email.includes("@") && email.includes(".")){
+        //     alert("valid");
+        //   }
+        //   else{
+        //     alert("Invalid")
+        //   }
+
+        // let c = prompt("Enter sentence:");
+        // alert(c.split(" ").join("").length);
+
+        // let s = prompt("Enter paragraph:");
+        // alert(s.split(" ").length);
+
+        // let a = prompt("Enter string:");
+        // if(a.length>0){
+        //     alert(s[0] + " " + s[s.length - 1]);
+        // }
+
+        // let  s = prompt("Enter sentence:");
+        // let oword = prompt("oword");
+        // let nword = prompt("nword");
+        // alert(s.replace(oword, nword));
+
+        // let s = prompt("Enter word");
+        // if(s.length < 5 || s.length > 20){
+        //     alert("Error");
+        // }
+        // else{
+        //     alert("Accept");
+        // }
+
+        // let  s = prompt("Enter string");
+        // let c = 0;
+        // for(let i=0; i<a.length; i++){
+        //     if(a[i] >= "A" && a[i] <= "Z"){
+        //         c++;
+        //     }
+        // }
+        // alert(c);
+        
+        // let s = prompt("Enter string");
+        // alert(s.replace(/[^a-z A-Z 0-9]/g, ""));
+
+        
+        // let s = prompt("enter string");
+        // alert(s.startsWith("J"));
+        // alert(s.endsWith("t"));
+
+        // let s = prompt("Enter sentence");
+        // let s = s.split(" ");
+        // let c= 0;
+        // let l =" ";
+        // for(let i=0; i<s.length; i++){
+        //     if(a[i].length>c){
+        //         c = s[i].length;
+        //         l=s[i];
+        //     }
+        // }
+        // alert(l); 
+
+        // let s = prompt("Enter mobile number");
+        // alert("*".repeat(s.length-4)+num.slice(-4));
+
+        // let s = prompt("Enter string");
+        // let res =" ";
+        // for(let i=0;i<s.length; i++){
+        //     for(let j=0;i<s.length;j++){
+        //         if(s[i]==s[j]){
+        //             res += s[i] + " ";
+        //             break;
+        //         }
+        //     }
+        // }
+        // alert(res);
+
+        // let s = prompt("Enter string");
+        // let v = 0, c = 0;
+        // for (let i = 0; i < s.length; i++) {
+        //     let ch = s[i].toLowerCase();
+        //     if (ch >= "a" && ch <= "z") 
+        //       if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") {
+        //          v++;
+        //         }
+        //          else {
+        //             c++;
+        //         }
+        //     }
+        // }
+        // alert("Vowels: " + v + " Consonants: " + c);
+
+
+        // let s = prompt("Enter sentence");
+        // s = s.split(" ");
+        // let res = " ";
+        // for(let i=0;i<s.length;i++){
+        //     if(!s[i].includes(res)){
+        //         res += s[i]+" ";
+        //     }
+        // }
+        // alert(res);
+
+         
+        // let x = prompt("Enter string");
+        // let y =x.split(" ");
+        // let r=[];
+        // for(let i=0;i<y.length;i++){
+        //     if(r.includes(y[i])==false){
+        //       r.push(y[i]);  
+        //     }
+        // }
+        // alert(r.join(" "));
+
+
+        // let x = prompt("Enter string");
+        // let  y = " ";
+        // for(let i=0;i<x.length;i++){
+        //     if(s[i] >= "0" && s[i] <= "9"){
+        //         y += s[i];
+        //     }
+        // }
+        // alert(y);
+
+
+        let p = prompt("Enter password");
+        let n = 0;
+        let u = 0;
+        if(p.length >= 8){
+            for(let i=0;i<p.length;i++){
+                if(p[i]>="A" && p[i] <="Z"){
+                    u++;
+                }
+                if(p[i]>="0" && p[i]<="9"){
+                    n++;
+                }
+            }
+            if(u>0 && n>0){
+                alert("valid");
+            }
+            else{
+                alert("Invalid");
+            }
+            else{
+                alert("Invalid");
+            }
+     </script>
+     <body>
+       <p>Hello</p> 
+   </body>
+</html>
