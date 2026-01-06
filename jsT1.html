@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/Day%2020/own%20website/T2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>JavaScript Event</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      background: red;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="alertBtn">Click Alert</button>
+
+  <p id="para">Hello Paragraph</p>
+  <button id="showBtn">Show</button>
+  <button id="hideBtn">Hide</button>
+
+  <div id="textDiv">Double Click Me</div>
+  <p id="fontPara">Double Click Font</p>
+
+  <div id="colorBox" class="box"></div>
+
+  <button id="tipBtn">Hover Me</button>
+  <p id="tooltip" style="display:none">Tooltip Message</p>
+
+  <div id="mouseArea" style="height:200px;border:1px solid"></div>
+  <p id="mousePos"></p>
+
+  <input id="keyInput" placeholder="Press key">
+
+  <form id="myForm">
+    <input id="nameInput" placeholder="Enter name">
+    <button type="submit">Submit</button>
+  </form>
+
+  <select id="colorSelect">
+    <option value="">Select</option>
+    <option value="pink">Pink</option>
+    <option value="lightblue">Blue</option>
+  </select>
+
+  <input id="liveInput" placeholder="Type here">
+  <p id="liveText"></p>
+  <p id="charCount"></p>
+
+  <button class="multiBtn">Button A</button>
+  <button class="multiBtn">Button B</button>
+
+  <div id="parent" style="padding:20px;border:2px solid black">
+    Parent
+    <button id="child">Child</button>
+  </div>
+
+<script>
+window.addEventListener("load", () => {
+  console.log("Page Loaded");
+});
+
+const alertBtn = document.getElementById("alertBtn");
+alertBtn.addEventListener("click", () => {
+  alert("Button Clicked");
+});
+
+const para = document.getElementById("para");
+document.getElementById("showBtn").addEventListener("click", () => {
+  para.style.display = "block";
+});
+document.getElementById("hideBtn").addEventListener("click", () => {
+  para.style.display = "none";
+});
+
+const textDiv = document.getElementById("textDiv");
+textDiv.addEventListener("dblclick", () => {
+  textDiv.textContent = "Text Changed";
+});
+
+const fontPara = document.getElementById("fontPara");
+fontPara.addEventListener("dblclick", () => {
+  fontPara.style.fontSize = "30px";
+});
+
+const colorBox = document.getElementById("colorBox");
+colorBox.addEventListener("mouseenter", () => {
+  colorBox.style.background = "green";
+});
+colorBox.addEventListener("mouseleave", () => {
+  colorBox.style.background = "red";
+});
+
+const tooltip = document.getElementById("tooltip");
+document.getElementById("tipBtn").addEventListener("mouseover", () => {
+  tooltip.style.display = "block";
+});
+document.getElementById("tipBtn").addEventListener("mouseout", () => {
+  tooltip.style.display = "none";
+});
+
+const mouseArea = document.getElementById("mouseArea");
+const mousePos = document.getElementById("mousePos");
+mouseArea.addEventListener("mousemove", (e) => {
+  mousePos.textContent = `X:${e.offsetX} Y:${e.offsetY}`;
+});
+
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  alert("Right Click Disabled");
+});
+
+document.getElementById("keyInput").addEventListener("keydown", (e) => {
+  console.log("Key Pressed:", e.key);
+});
+
+const form = document.getElementById("myForm");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (nameInput.value === "") {
+    alert("Input cannot be empty");
+  }
+});
+
+const colorSelect = document.getElementById("colorSelect");
+colorSelect.addEventListener("change", () => {
+  document.body.style.background = colorSelect.value;
+});
+
+const liveInput = document.getElementById("liveInput");
+liveInput.addEventListener("input", () => {
+  liveText.textContent = liveInput.value;
+  charCount.textContent = "Count: " + liveInput.value.length;
+});
+
+document.querySelectorAll(".multiBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert(btn.textContent);
+  });
+});
+
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+parent.addEventListener("click", () => {
+  alert("Parent Clicked");
+});
+
+child.addEventListener("click", (e) => {
+  e.stopPropagation();
+  alert("Child Clicked");
+}); -->
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
