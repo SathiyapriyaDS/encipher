@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/Day%2020/own%20website/T4.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>JavaScript</title>
+</head>
+<body style="background-color: deeppink;">
+
+    <button id="bgBtn">Change Background</button>
+
+    <h3 id="counter">43</h3>
+
+    <button id="cancelAlert">cancelAlert</button>
+
+    <p id="message">Message appeared!</p>
+    <button id="cancelMsg">Cancel Msg</button>
+
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+
+    <h3 id="intervalNum">0</h3>
+
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li style="background-color: yellow;">D</li>
+    </ul>
+
+    <div id="view"></div>
+    <p id="size"></p>
+
+    <p id="domText">DOM Loaded</p>
+
+    <button id="top" style="display:none;position:fixed;bottom:20px;">Top</button>
+    
+    <img src="./jsT4_files/new1.jpg">
+    <img src="./jsT4_files/new2.jpg">
+
+<script>
+
+setTimeout(() => {
+  console.log("Hello after 3 seconds");
+}, 3000);
+
+document.getElementById("bgBtn").addEventListener("click", () => {
+  setTimeout(() => {
+    document.body.style.backgroundColor = "deeppink";
+  }, 5000);
+});
+
+setInterval(() => {
+  console.log(new Date().toLocaleTimeString());
+}, 1000);
+
+let count = 0;
+setInterval(() => {
+  count++;
+  document.getElementById("counter").innerText = count;
+}, 1000);
+
+let alertId = setTimeout(() => {
+  alert("Alert after 10 seconds");
+}, 10000);
+
+document.getElementById("cancelAlert").addEventListener("click", () => {
+  clearTimeout(alertId);
+});
+
+let msgId = setTimeout(() => {
+  document.getElementById("message").innerText = "Message appeared!";
+}, 5000);
+
+document.getElementById("cancelMsg").addEventListener("click", () => {
+  clearTimeout(msgId);
+});
+
+let i = 1;
+let numTimer = setInterval(() => {
+  console.log(i);
+  if (i === 10) clearInterval(numTimer);
+  i++;
+}, 1000);
+
+let value = 0;
+let timer;
+
+document.getElementById("start").addEventListener("click", () => {
+  timer = setInterval(() => {
+    value++;
+    document.getElementById("intervalNum").innerText = value;
+  }, 1000);
+});
+
+document.getElementById("stop").addEventListener("click", () => {
+  clearInterval(timer);
+});
+
+document.querySelectorAll("li").forEach(li => {
+  li.addEventListener("click", () => {
+    li.style.backgroundColor = "yellow";
+  });
+});
+
+window.addEventListener("resize", () => {
+  document.getElementById("view").innerText =
+    window.innerWidth < 600 ? "Mobile View" : "Desktop View";
+
+  document.getElementById("size").innerText =
+    "Width: " + window.innerWidth + " Height: " + window.innerHeight;
+});
+
+window.addEventListener("scroll", () => {
+  document.getElementById("top").style.display =
+    window.scrollY > 200 ? "block" : "none";
+});
+
+document.getElementById("top").addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("domText").innerText = "DOM Loaded";
+});
+
+window.addEventListener("load", () => {
+  alert("All images loaded");
+});
+
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
