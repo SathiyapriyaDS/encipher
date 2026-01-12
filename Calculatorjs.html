@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://127.0.0.1:5500/Day%2020/own%20website/practice2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Calculator</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 300px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 15px;
+    }
+
+    .display {
+      width: 95%;
+      height: 60px;
+      background: #f1f3f4;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      font-size: 26px;
+      padding: 10px;
+      text-align: right;
+      border: none;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      height: 55px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .num {
+      background: #d9ecff;
+    }
+
+    .op {
+      background: #ffc107;
+    }
+
+    .clear {
+      background: #ff5252;
+      color: #fff;
+    }
+
+    .equal {
+      background: #1dd1a1;
+      color: #fff;
+      grid-column: span 4;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+    <input type="text" id="display" class="display" readonly="">
+
+    <div class="buttons">
+      <button class="op" onclick="press(&#39;+&#39;)">+</button>
+      <button class="op" onclick="press(&#39;-&#39;)">−</button>
+      <button class="op" onclick="press(&#39;*&#39;)">×</button>
+      <button class="op" onclick="press(&#39;/&#39;)">÷</button>
+
+      <button class="num" onclick="press(&#39;7&#39;)">7</button>
+      <button class="num" onclick="press(&#39;8&#39;)">8</button>
+      <button class="num" onclick="press(&#39;9&#39;)">9</button>
+      <button class="num" onclick="press(&#39;4&#39;)">4</button>
+
+      <button class="num" onclick="press(&#39;5&#39;)">5</button>
+      <button class="num" onclick="press(&#39;6&#39;)">6</button>
+      <button class="num" onclick="press(&#39;1&#39;)">1</button>
+      <button class="num" onclick="press(&#39;2&#39;)">2</button>
+
+      <button class="num" onclick="press(&#39;3&#39;)">3</button>
+      <button class="num" onclick="press(&#39;0&#39;)">0</button>
+      <button class="num" onclick="press(&#39;.&#39;)">.</button>
+      <button class="clear" onclick="clearDisplay()">C</button>
+
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById("display");
+
+    function press(value) {
+      display.value += value;
+    }
+
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    function calculate() {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = "Error";
+      }
+    }
+  </script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
