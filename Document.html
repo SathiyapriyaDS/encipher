@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://127.0.0.1:5500/Day%2020/own%20website/formm1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background:url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}eerrrrr  
+
+h1{
+    color: white;
+    text-transform: uppercase;
+}
+
+form{
+    background-color: rgb(71, 153, 191);
+    padding: 25px 30px;
+    width: 500px; 
+    border-radius: 10px;
+}
+label{
+    font-size: 25px;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input:hover{
+    background-color: aliceblue;
+}
+textarea:hover{
+    background-color: aliceblue;
+}
+textarea{
+    resize: none;
+    height: 70px;
+}
+.skill{
+    display: flex;
+    gap: 10px;
+}
+.small{
+    font-size: 15px;
+    font-weight: 300;
+}
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+}
+
+button{
+    background-color: black;
+    color: white;
+    margin-left: 80%;
+    margin-top: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: orangered;
+}
+    </style>
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <form id="form">
+        <label>Name<br>
+            <input type="text" id="name"><br>
+        </label>
+
+        <label>Email<br>
+            <input type="email" id="mail"><br>
+        </label>
+
+        <label>Password<br>
+            <input type="password" id="password"><br>
+        </label>
+
+        <label> DOB <br>
+            <input type="date" id="date"><br>
+        </label>
+
+        <label>Skills<br>
+            <div class="skill">
+            <label><input type="checkbox" value="HTML"><span class="small">HTML</span></label>
+            <label><input type="checkbox" value="CSS"><span class="small">CSS</span></label>
+            <label><input type="checkbox" value="JS"><span class="small">JS</span></label>
+            </div>
+        </label>
+
+        <label>Gender<br>
+            <input type="radio" name="gender"><span class="small">Male</span>
+            <input type="radio" name="gender"><span class="small">Female</span>
+            <input type="radio" name="gender"><span class="small">Others</span><br>
+        </label>
+        
+        <label>Country<br>
+            <select id="option">
+                <option>India</option>
+                <option>US</option>
+                <option>UK</option>
+                <option>Germany</option>
+                <option>UAE</option>
+            </select><br>
+        </label>
+
+        <label>Address<br>
+            <textarea></textarea><br>
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script>
+    const form = document.getElementById("form");
+    let editIndex = localStorage.getItem("editIndex");
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if(editIndex!==null){
+        let u = users[editIndex];
+        document.getElementById("name").value = u.name;
+        document.getElementById("mail").value = u.email;
+        document.getElementById("password").value = u.password;
+        document.getElementById("date").value = u.date;
+        document.getElementById("option").value = u.country;
+        document.querySelector("textarea").value = u.address;
+        
+        document.querySelectorAll("input[type=checkbox]").forEach(cb => {
+            if(u.skills.includes(cb.nextElementSibling.innerText)) cb.checked = true;
+        });
+        document.querySelectorAll("input[name = gender]").forEach(rb => {
+            if(rb.nextElementSibling.innerText === u.gender) rb.checked = true;
+        });
+        localStorage.removeItem("editIndex");
+    }
+
+    form.onsubmit = event =>{
+        event.preventDefault();
+
+        let n = document.getElementById("name").value.trim();
+        let e=document.getElementById("mail").value.trim();
+        let p = document.getElementById("password").value.trim();
+        let u = /[A-Z]+[a-z]{5,}/;
+        let m = /[a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3} /;
+        let P = /[A-Z]+[a-z]{5,}[@\.\-$][0-9]{1,}/;
+        if(n===""||p===""){
+            alert("Enter valid details");
+            return;
+        }
+        if(n.length<8 || p.length <10){
+            alert("Invalid name or password length");
+            return;
+        }
+        if(!P.test(p)){
+            alert("Enter valid password");
+            return;
+        }
+
+        let user = {
+            name:n,
+            email:e,
+            password :p,
+            date : document.getElementById("date").value,
+            skills : Array.from(document.querySelectorAll("input[type=checkbox]:checked")).map(x => x.nextElementSibling.innerText).join(", "),
+            gender : document.querySelector("input[name = gender]:checked")?.nextElementSibling.innerText || "",
+            country:document.getElementById("option").value,
+            address:document.querySelector("textarea").value
+        };
+        if(editIndex !== null){
+            users[editIndex] = user;
+            localStorage.removeItem("editIndex");
+        }
+        else{
+            users.push(user);
+        }
+        localStorage.setItem("users", JSON.stringify(users));
+        location.href = "table.html"
+    }
+</script>
+
+
+</body></html>
